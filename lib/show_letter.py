@@ -11,8 +11,6 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
   's',
   type=str,
-  nargs='?',
-  default=True,
   help='The letter to show.'
 )
 parser.add_argument(

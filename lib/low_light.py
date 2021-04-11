@@ -11,8 +11,6 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
   'low_light',
   type=str2bool,
-  nargs='?',
-  default=True,
   help='"low_light" state'
 )
 

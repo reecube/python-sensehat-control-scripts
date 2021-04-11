@@ -15,7 +15,7 @@ parser.add_argument(
   help='The angle to rotate the LED matrix though. 0 is with the Raspberry Pi HDMI port facing downwards.'
 )
 parser.add_argument(
-  'redraw',
+  '--redraw',
   type=str2bool,
   nargs='?',
   default=True,

@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(
   description='Flips the image on the LED matrix vertically.'
 )
 parser.add_argument(
-  'redraw',
+  '--redraw',
   type=str2bool,
   nargs='?',
   default=True,

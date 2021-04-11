@@ -14,7 +14,7 @@ parser.add_argument(
   help='The file system path to the image file to load.'
 )
 parser.add_argument(
-  'redraw',
+  '--redraw',
   type=str2bool,
   nargs='?',
   default=True,
