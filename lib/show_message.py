@@ -42,8 +42,18 @@ try:
 
   sense = SenseHat()
 
-  result = sense.show_message(args.r, args.redraw)
+  result = sense.show_message(
+    args.r,
+    args.redraw
+  )
 
-  finish({"result": True})
+  finish(
+    {
+      "result": True
+    }
+  )
 except Exception, e:
-  finish(e, 1)
+  finish(
+    e,
+    1
+  )
