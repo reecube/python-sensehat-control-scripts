@@ -15,6 +15,6 @@ try:
 
   result = sense.get_pixels()
 
-  finish({ "result": result })
+  finish({"result": result})
 except Exception, e:
   finish(e, 1)

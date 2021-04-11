@@ -2,9 +2,10 @@
 
 import argparse
 
-from lib._return import finish
+from _return import finish
 
-parser = argparse.ArgumentParser(description='Sets an individual LED matrix pixel at the specified X-Y coordinate to the specified colour.')
+parser = argparse.ArgumentParser(description='Sets an individual LED matrix pixel at '
+                                             'the specified X-Y coordinate to the specified colour.')
 parser.add_argument('x', type=int, choices=xrange(0, 7), metavar='{ x: 0-7 }',
                     help='0 is on the left, 7 on the right.')
 parser.add_argument('y', type=int, choices=xrange(0, 7), metavar='{ y: 0-7 }',
@@ -25,6 +26,6 @@ try:
 
   result = sense.set_pixel(args.x, args.y, args.r, args.g, args.b)
 
-  finish({ "result": True })
+  finish({"result": True})
 except Exception, e:
   finish(e, 1)

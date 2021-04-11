@@ -21,6 +21,6 @@ try:
   result = sense.get_pixel(args.x, args.y)
 
   # Returns a list of [R, G, B] representing the colour of an individual LED matrix pixel at the specified X-Y coordinate.
-  finish({ "get_pixel": result })
+  finish({"get_pixel": result})
 except Exception, e:
   finish(e, 1)

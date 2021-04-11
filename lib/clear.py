@@ -21,6 +21,6 @@ try:
 
   result = sense.clear(args.r, args.g, args.b)
 
-  finish({ "result": True })
+  finish({"result": True})
 except Exception, e:
   finish(e, 1)

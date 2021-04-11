@@ -1,13 +1,15 @@
 import argparse
 
-def toIntList(str):
-    return list(map(int, str.split(',')))
 
-def imgArray(v):
+def to_int_list(v):
+  return list(map(int, v.split(',')))
+
+
+def img_array(v):
   if not isinstance(v, basestring):
     raise argparse.ArgumentTypeError('String value expected.')
 
-  output = list(map(toIntList, v.split(';')))
+  output = list(map(to_int_list, v.split(';')))
 
   if not (isinstance(output, list) and (len(output) == 8 * 8)):
     raise argparse.ArgumentTypeError('Expected list with 8 * 8 entries.')

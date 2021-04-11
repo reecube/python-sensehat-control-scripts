@@ -19,6 +19,6 @@ try:
   result = sense.flip_v(args.redraw)
 
   # A list containing 64 smaller lists of [R, G, B] pixels (red, green, blue) representing the flipped image.
-  finish({ "result": result })
+  finish({"result": result})
 except Exception, e:
   finish(e, 1)
