@@ -43,3 +43,13 @@ python lib/set_rotation.py
 python lib/show_letter.py
 python lib/show_message.py
 ```
+
+On success a JSON object is returned with the result stored under `result`:
+
+```
+{
+  "result": ...
+}
+```
+
+On error the error is shown as text directly. So to use it within code, you could go for `result.startsWith('{')`.
