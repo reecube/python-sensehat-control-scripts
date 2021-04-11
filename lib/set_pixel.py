@@ -65,7 +65,7 @@ try:
 
   sense = SenseHat()
 
-  result = sense.set_pixel(
+  sense.set_pixel(
     args.x,
     args.y,
     args.r,

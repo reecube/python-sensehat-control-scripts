@@ -42,7 +42,7 @@ try:
 
   sense = SenseHat()
 
-  result = sense.show_message(
+  sense.show_message(
     args.text_string,
     args.scroll_speed,
     args.text_colour,

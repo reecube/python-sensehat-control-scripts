@@ -37,7 +37,7 @@ try:
 
   sense = SenseHat()
 
-  result = sense.show_letter(
+  sense.show_letter(
     args.s,
     args.text_colour,
     args.back_colour

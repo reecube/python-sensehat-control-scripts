@@ -45,7 +45,7 @@ try:
 
   sense = SenseHat()
 
-  result = sense.clear(
+  sense.clear(
     args.r,
     args.g,
     args.b
