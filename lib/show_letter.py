@@ -1,4 +1,4 @@
-# https://pythonhosted.org/sense-hat/api/#show_message
+# https://pythonhosted.org/sense-hat/api/#show_letter
 
 import argparse
 
@@ -6,19 +6,14 @@ from _return import finish
 from _img_array import to_int_list
 
 parser = argparse.ArgumentParser(
-  description='Scrolls a text message from right to left across the LED matrix and at the specified speed, in the specified colour and background colour.'
+  description='Displays a single text character on the LED matrix.'
 )
 parser.add_argument(
-  'text_string',
+  's',
   type=str,
-  help='The message to scroll.'
-)
-parser.add_argument(
-  '--scroll_speed',
-  type=float,
   nargs='?',
-  default=0.1,
-  help='The speed at which the text should scroll. This value represents the time paused for between shifting the text to the left by one column of pixels. Defaults to 0.1'
+  default=True,
+  help='The letter to show.'
 )
 parser.add_argument(
   '--text_colour',
@@ -42,9 +37,8 @@ try:
 
   sense = SenseHat()
 
-  result = sense.show_message(
-    args.text_string,
-    args.scroll_speed,
+  result = sense.show_letter(
+    args.s,
     args.text_colour,
     args.back_colour
   )
